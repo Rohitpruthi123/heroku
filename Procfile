@@ -1,1 +1,1 @@
-web: gunicorn streamlit_base:app
+web: sh steup.sh && streamlit run streamlit_base.py
