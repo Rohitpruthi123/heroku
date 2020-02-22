@@ -20,10 +20,10 @@ import PIL.ImageDraw
 st.title('Welcome to Vimaan 2020')
 st.title("Please get your image captured")
 
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg","png"])
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg","png","jpeg","gif","bmp","tiff","JPEG","JPG"])
 
 
-font = ImageFont.truetype("arial.ttf", 25)
+font = ImageFont.truetype('FreeMono.ttf',size = 45)
 
 
 if uploaded_file is not None:
@@ -55,7 +55,7 @@ if uploaded_file is not None:
         
         #font = ImageFont.truetype("sans-serif.ttf", 16)
 # draw.text((x, y),"Sample Text",(r,g,b))
-        d.text(((left+right)/2, (top+bottom)/2),str(i),(255,255,0), font = font)
+        d.text((left, (top+bottom)/2),str(i),(255,255,0), font = font)
         i = i+1
     
     # Display the image on screen
@@ -85,7 +85,7 @@ if uploaded_file is not None:
         
         #font = ImageFont.truetype("sans-serif.ttf", 16)
 # draw.text((x, y),"Sample Text",(r,g,b))
-        d.text(((left+right)/2, (top+bottom)/2),str('%.2f'%(1-face_score[j])),(255,255,0), font = font)
+        d.text((left, (top+bottom)/2),str('%.2f'%(1-face_score[j])),(255,255,0), font = font)
         j = j+1
     
     st.image(pil_image_with_score, caption='Ranked_by_similarity', use_column_width=True)
