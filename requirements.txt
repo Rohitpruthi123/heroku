@@ -1,5 +1,5 @@
 face_recognition==1.2.3
 streamlit==0.56.0
 pandas==0.25.1
-numpy==1.16.5
+numpy==1.22.0
 Pillow==7.0.0
